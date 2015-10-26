@@ -54,7 +54,14 @@ public class DBService {
 	public Connection getConnection() {
 		return conn;
 	}
-
+	public void disconn() {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	public void setConnection(Connection conn) {
 		this.conn = conn;
 	}

@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 import java.io.*;
 
 public class Transactions {
-	private String date; // in format: MM/DD/YYYY
+	private String date; // in format: MM-DD-YYYY
 	private String acctNo = "";
 	private String type = ""; // "Check", "Debit", Deposit", "Withdraw"
 	private boolean processedFlag = false; //did not implement
@@ -41,7 +41,7 @@ public class Transactions {
 	}
 
 	private Calendar string2Calendar(String aDate) {
-		String[] tokens = aDate.split("/");
+		String[] tokens = aDate.split("-");
 		// System.out.println(tokens[0] + " " + tokens[1] + " " + tokens[2]);
 		Calendar cal = new GregorianCalendar((int) Integer.parseInt(tokens[2]),
 				(int) Integer.parseInt(tokens[0]) - 1,

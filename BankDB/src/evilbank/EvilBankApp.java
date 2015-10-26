@@ -176,7 +176,7 @@ public class EvilBankApp {
 				lamount = Validator.getDouble(keyboard,
 						"Enter the transaction amount: ");
 				ldate = Validator.getString(keyboard,
-						"Enter the transaction date (MM/DD/YYYY): ");
+						"Enter the transaction date (MM-DD-YYYY): ");
 				Transactions trans = new Transactions(laccount, lamount, ltype,
 						ldate);
 				//save transaction to DB
@@ -222,6 +222,7 @@ public class EvilBankApp {
 		}
 			break;
 		}
+		aBank.dbService.disconn();
 		System.out.println("\nClosing Program.....");
 		keyboard.close();		}
 	/*
